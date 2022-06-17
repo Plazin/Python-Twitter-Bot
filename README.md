@@ -1,4 +1,4 @@
-# 🤔 Twitter Bot 🤔
+# 🕊 Twitter Bot 🕊
 
 ## 💭 Objetivo do Projeto
  
