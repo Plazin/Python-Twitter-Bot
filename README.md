@@ -1,8 +1,8 @@
-# 📚Objetivo
+## 🧐Objetivo?
 ### Criar um bot totalmente automático para o Twitter
 
-# 🗯 Linguagem utilizada
+## 🗯 Linguagem utilizada
 ### Python
 
-# 🧑🏻 Tasks
+## 🧑🏻 Tasks
 ### 
