@@ -1,22 +1,22 @@
 #import = importar uma biblioteca
+#variável de ambiente virtual
 
 from os import read, write
 import tweepy #API do Twitter
 import random #lib de random
 import time # lib temporizador
 
-# chaves para o bot funcionar na conta
+# chaves para o bot funcionar na conta / env /melhorar o nome das chaves
 api_key = ''
-api_secret_key = ''
-acess_key = ''
-acess_secret = ''
+api_secret_key = '' 
+access_key = ''
+access_secret = ''
 auth = tweepy.OAuthHandler(api_key, api_secret_key)
-auth.set_access_token(acess_key, acess_secret)
+auth.set_access_token(access_key, access_secret)
 
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 FILE_NAME = 'last_seen.txt'
-
 
 def read_last_seen(FILE_NAME):
     file_read = open(FILE_NAME, 'r')
