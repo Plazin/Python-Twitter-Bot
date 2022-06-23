@@ -12,7 +12,7 @@ access_token_secret = os.getenv("ACCESS_TOKEN_SECRET")
 
 client = tweepy.Client(consumer_key=consumer_key,consumer_secret=consumer_secret,access_token=access_token,access_token_secret=access_token_secret)
 
-#command to the bot tweet something. If fails, the output says: Algo falou, burro.
+#command to the bot tweet something. If fails, the output says: Algo falhou, burro.
 try:
     tweet = client.create_tweet(text="teste")
     print(tweet)
