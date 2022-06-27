@@ -13,7 +13,7 @@
 - [x] Instalação do Python
 - [x] Importação das bibliotecas
 - [x] Criação da conta de dev do Twitter
-- [ ] Criação da lógica do bot
+- [x] Criação da lógica do bot
 - [ ] O bot funcionar
 - [ ] O bot estar 100% automatizado
 
