@@ -14,7 +14,8 @@
 - [x] Importação das bibliotecas
 - [x] Criação da conta de dev do Twitter
 - [x] Criação da lógica do bot
-- [ ] O bot funcionar
+- [x] O bot funcionar com textos
+- [ ] O bot funcionar com imagens e texto
 - [ ] O bot estar 100% automatizado
 
 
