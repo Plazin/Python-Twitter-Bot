@@ -13,6 +13,7 @@ access_token_secret = os.getenv("ACCESS_TOKEN_SECRET")
 
 client = tweepy.Client(consumer_key=consumer_key,consumer_secret=consumer_secret,access_token=access_token,access_token_secret=access_token_secret)
 
+#function with arrays that conteins all phrases that can be used to create a randomic tweet
 def random_phrases():
     list1 = ['O Retorno pela Morte ','A Seleção Real ','O Loop Temporal ','O Culto da Bruxa ','O Santuário ','Rota da Preguiça ','A Guilda dos Assassinos ','A Torre das Pleiades ',
     'A Rota da Ganância ','A Rota do Orgulho ','A Rota da Ira ','A Rota da Inveja ','A Rota da Vingança ','A Rota da Luxúria ','A Rota da Gula  ','A Rota Escolar ','O Rinha IF '
@@ -37,11 +38,18 @@ def random_phrases():
     random_moment = random.choice(list1) + random.choice(list2) + random.choice(list3) + random.choice(list4) + random.choice(list5)
     return random_moment
 
-#command to the bot tweet something. If fails, the output says: Algo falhou, burro.
+#function with arrays that conteins all images that can be used to create a randomic tweet
+def random_images():
+    image_list1 = ['/assets/susbaru.jpg']
+    random_person = random.choice(image_list1)
+    return random_person
+
+#command to the bot tweet something. If fails, the output says: Algo falhou.
 def _main_():
+    randomium_img = random_images()
     randomium = random_phrases()
     try:
-        random_tweet = client.create_tweet(text=randomium)
+        random_tweet = client.create_tweet(text=randomium | randomium_img)
         print(random_tweet)
         return random_tweet
     except:
@@ -49,4 +57,4 @@ def _main_():
 
 while True:
     _main_()
-    time.sleep(10)
+    time.sleep(120)
