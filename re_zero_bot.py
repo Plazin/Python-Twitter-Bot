@@ -41,7 +41,10 @@ def random_phrases():
 #function with arrays that conteins all images that can be used to create a randomic tweet
 def random_images():
     image_list1 = ['/assets/susbaru.jpg']
-    random_person = random.choice(image_list1)
+    image_list2 = ['/assets/echidna.png']
+    image_list3 = ['/assets/emiliacomodaban.png']
+
+    random_person = random.choice(image_list1) + random.choice(image_list2) + random.choice(image_list3)
     return random_person
 
 #command to the bot tweet something. If fails, the output says: Algo falhou.
