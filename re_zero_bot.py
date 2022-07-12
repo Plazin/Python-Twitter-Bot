@@ -1,6 +1,3 @@
-
-from email.mime import image
-from fileinput import filename
 from dotenv import load_dotenv
 import random
 import time
@@ -46,20 +43,25 @@ def random_phrases():
     return random_moment
 
 #function with arrays that conteins all images that can be used to create a randomic tweet
-def random_images():
+#def random_images():
 
-    image_list1 = ('susbaru.jpg')
-    image_list2 = ('echidna.png')
+#    image_list1 = ('/susbaru.jpg')
+#    image_list2 = ('/echidna.png')
 
-    random_person = random.choice(image_list1)
-    return random_person
+#    random_person = random.choice(image_list1)
+#    return random_person
+
+def upload_media(text, filename):
+    upload_media = media.media_upload(filename)
+    media.update_status(text, media_ids = [media.media_id_string])
+    return upload_media
 
 #command to the bot tweet something. If fails, the output says: Algo falhou.
 def _main_():
-    randomium_img = random_images()
+    #randomium_img = random_images()
     randomium = random_phrases()
     try:
-        random_tweet_img = media.update_status_with_media(filename=randomium_img) #usar o simple_upload, junto com media_ids, apontado.
+        #random_tweet_img = media.update_status_with_media(filename=randomium_img) #usar o simple_upload, junto com media_ids, apontado.
         random_tweet = client.create_tweet(text=randomium)
         print(random_tweet)
         return random_tweet
