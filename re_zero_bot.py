@@ -16,6 +16,7 @@ auth = os.getenv("ACCESS_TOKEN_SECRET")
 
 client = Client(consumer_key=consumer_key,consumer_secret=consumer_secret,access_token=access_token,access_token_secret=access_token_secret)
 media = API(auth=auth)
+supermedia = Media(auth=auth)
 
 #function with arrays that conteins all phrases that can be used to create a randomic tweet
 def random_phrases():
@@ -52,9 +53,9 @@ def random_phrases():
 #    return random_person
 
 def upload_media(text, filename):
-    upload_media = media.media_upload(filename)
+    image_media = media.media_upload(filename)
     media.update_status(text, media_ids = [media.media_id_string])
-    return upload_media
+    return image_media
 
 #command to the bot tweet something. If fails, the output says: Algo falhou.
 def _main_():
