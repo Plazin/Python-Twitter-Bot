@@ -16,8 +16,6 @@
 - [x] Criação da lógica do bot
 - [x] O bot funcionar com textos
 - [x] Aumento da quantidade de frases nos arrays
-- [ ] O bot funcionar com imagens e texto
-- [ ] O bot estar 100% automatizado
 
 
 ## 👨🏻‍💻 Tecnologias utilizadas: 
